@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+/* form */
+.form{
+  display: flex;
+
+}
+/* form_fields */
+.form_fields{
+  background-color: grey;
+  padding: 20px;
+  width: 50%;
+  text-align: start;
+  border-radius: 30px;
+}
+
+/* form_Outputs */
+.form_Outputs{
+  background-color: rgb(189, 101, 101);
+  width: 50%;
+  border-radius: 30px;
+  text-align: start;
+  padding: 20px;
+}
