@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.main-nav {
+  background-color: #61dafb;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+}
+nav a:hover {
+  background-color: aqua;
+
+}
+/* nav a.active {
+  background-color: aquamarine;
+  font-weight: 700;
+
+} */
+
+.users-pg a{
+  text-decoration: none;
+  background-color: cadetblue;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+ 
+}
