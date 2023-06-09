@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Reducer } from "./Components/Reducer";
+import { Fetch_Api } from "./Components/Fetch_Api";
+import { Axios_get } from "./Components/Axios_get";
+import { Axios_post } from "./Components/Axios_post";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Reducer />
+      <Fetch_Api /> 
+      <Axios_get />
+      */}
+      <Axios_post/>
     </div>
   );
 }
