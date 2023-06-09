@@ -1,3 +1,6 @@
+@import url("./css-components/form.css");
+@import url("./css-components/Data.css");
+
 .App {
   text-align: center;
 }

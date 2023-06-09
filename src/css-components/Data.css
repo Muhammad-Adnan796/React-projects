@@ -1,0 +1,100 @@
+.data-div {
+  width: 100%;
+  height: 100vh;
+}
+/* new-data-btn */
+.new-data-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+}
+/* new-data-btn a */
+.new-data-btn a {
+  margin: 10px;
+  display: block;
+  text-align: start;
+}
+/* table */
+.table {
+  margin: auto;
+  border: 2px solid gray;
+  border-collapse: collapse;
+  background-color: #d9e8ee;
+}
+
+.table td,
+.table th {
+  border: 1.5px solid gray;
+  padding: 10px;
+}
+
+/* button */
+.btn-Delet button,
+.btn-Edit button {
+  width: 5.5vw;
+  height: 4.3vh;
+  background-color: #20df7f;
+  color: #224957;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  border: 1px solid #224957;
+  box-shadow: 2px 2px #32697e ;
+  font-size: 14px;
+}
+.btn-Delet button:hover,
+.btn-Edit button:hover {
+  width: 5.8vw;
+  height: 4.5vh;
+  font-size: 15px;
+}
+
+/* row-head */
+.row-head {
+  color: #224957;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  background-color: #20df7f;
+}
+/* row-data */
+.row-data {
+  color: #224957;
+  font-size: 20px;
+  background-color: #9ef8cb;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/* row-data:hover */
+.row-data:hover   {
+  background-color: #1ff389;
+}
+
+/* buttn */
+.buttn {
+    width: 15vw;
+    height: 5vh;
+    background-color: #224957;
+    color:  #20df7f;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    border: 1px solid #224957;
+    box-shadow: 2px 2px #20df7f;
+    font-size: 14px;
+}
+/* buttn : hover */
+.buttn:hover {
+    width: 15.3vw;
+    height: 5.8vh;
+    background-color: #224957;
+    color:  #20df7f;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    border: 1px solid #224957;
+    box-shadow: 2px 2px #20df7f;
+    font-size: 15px;
+}
+
+
