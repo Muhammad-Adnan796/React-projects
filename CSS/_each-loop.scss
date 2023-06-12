@@ -1,0 +1,25 @@
+// For Map
+
+$map: (
+  "normal": 12px,
+  "bold": 15px,
+  "italic": 18px,
+);
+
+@each $i, $f-size in $map {
+  .#{$i} {
+    font-weight: $i;
+    font-size: $f-size;
+  }
+}
+
+// For List
+
+$list: ((normal bold 10px), (emphasis italic 15px));
+
+@each $name, $style, $size in $list {
+  .#{$name} {
+    font-family: $style;
+    font-size: $size;
+  }
+}

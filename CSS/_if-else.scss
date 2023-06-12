@@ -1,0 +1,12 @@
+$test: 5;
+a {
+  @if $test > 2 {
+    color: blue;
+  } @else if $test > 5 and $test < 10 {
+    color: brown;
+  } @else if $test >= 10 and $test < 20 {
+    color: blueviolet;
+  } @else {
+    background-color: green;
+  }
+}

@@ -1,0 +1,11 @@
+$i: 10;
+$f-size: 10;
+@while $i <= 50 {
+  .padding-#{$i} {
+    padding-left: 1px * $i;
+    font-size: $f-size + px;
+  }
+
+  $i: $i + 10;
+  $f-size: $f-size + 2;
+}

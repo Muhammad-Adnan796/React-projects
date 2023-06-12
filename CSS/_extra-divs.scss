@@ -1,0 +1,51 @@
+.cont-1 {
+  background-color: pink;
+  font-size: 20px;
+  width: 50%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-family: arial;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.cont-2{
+    background-color: purple;
+    @extend .cont-1;
+}
+.cont-3{
+    background-color: burlywood;
+    @extend .cont-1;
+}
+
+
+// Media Query with mixins and paramters return and content
+
+body{
+    background-color: gray;
+}
+
+@mixin media($width){
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@include media(1300px){
+    body{
+        background-color: red;
+    }
+}
+
+@include media(1000px){
+    body{
+        background-color: green;
+    }
+}
+
+@include media(700px){
+    body{
+        background-color: yellow;
+    }
+}

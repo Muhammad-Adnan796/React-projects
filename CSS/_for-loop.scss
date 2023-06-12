@@ -1,0 +1,7 @@
+@for $i from 1 through 10 {
+  .conte-#{$i} {
+    width: 100px * $i;
+    background-color: darken($color: pink, $amount: 10px * $i);
+    padding: 10px * $i;
+  }
+}
