@@ -1,0 +1,190 @@
+@import url('./_Services.scss');
+@import url("./_Home.scss");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+$fontsTxt: "Poppins", sans-serif;
+
+
+.nav {
+  height: 72px;
+  width: 100%;
+  background-color: #272a33;
+  z-index: 99;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8.4vw;
+  #menubar {
+    display: none;
+    color: white;
+  }
+  #menus ul {
+    display: flex;
+    list-style: none;
+    gap: 3vw;
+    .nav-link {
+      display: block;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: all 0.5s;
+      font-family: $fontsTxt;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  #free-btn {
+    background-color: #fb3e3e;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid #fb3e3e;
+    padding: 10px 20px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: $fontsTxt;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+.active {
+  background-color: transparent;
+}
+
+.nav #logo {
+  h2 {
+    font-family: $fontsTxt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+// menus-hide
+.menus-hide {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .active {
+    background-color: #272a33;
+  }}
+
+@media (max-width: 992px) {
+  .nav {
+    #menubar {
+      display: block;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font-size: 24px;
+      border-radius: 0.375rem;
+      padding: 0.25rem 0.75rem;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    #free-btn,
+    #menus {
+      display: none;
+    }
+  }
+
+  // menus2
+  .menus2 {
+    position: fixed;
+    z-index: 98;
+    display: block;
+    width: 100%;
+    height: 500px;
+    background-color: #272a33;
+    padding: 70px 0px 0px 8.3vw;
+    div ul .nav-link {
+      display: block;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: all 0.5s;
+      font-family: $fontsTxt;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      margin: calc(1.9rem + 0px) 0;
+      list-style: none;
+      &:first-child {
+        margin-top: 0px;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+
+    #free-btn {
+      background-color: #fb3e3e;
+      border-radius: 30px;
+      color: white;
+      border: 1px solid #fb3e3e;
+      padding: 10px 20px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      font-family: $fontsTxt;
+      font-weight: 500;
+      transition: all 0.4s ease;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .active {
+    height: 60px;
+    #logo {
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+    #menubar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 23px;
+      padding: 0.04rem 0.4rem;
+    }
+  }
+
+   // menus2
+  .menus2 {
+    div ul .nav-link {
+      font-size: 14px;
+      margin: calc(2rem + 0px) 0;
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 430px) {
+  .active {
+    height: 50px;
+  }
+}

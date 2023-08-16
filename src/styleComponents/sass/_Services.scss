@@ -1,0 +1,149 @@
+@import "./variables";
+
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 1.75rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: $fontsTxt;
+    color: black;
+    margin-top: 3rem;
+  }
+  hr {
+    margin: auto;
+    margin-top: 1rem;
+    width: 50px;
+    height: 2px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: $redClr;
+  }
+  .services-des {
+    color: $greyClr;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 14.4px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    width: 57%;
+  }
+
+  .service-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0px 1rem;
+    .service-div {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .diamond-sec {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        margin-top: 1rem;
+        padding: 15px;
+        width: 25%;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          .diamond-icon {
+            /* Change the background color on hover */
+            background-color: $redClr;
+            i {
+              color: white;
+            }
+          }
+          transform: translateY(-20px); /* Adjust the transformation as needed */
+        }
+        .diamond-icon {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 68px;
+          width: 68px;
+          background-color: #ffffff;
+          border-radius: 50%;
+          box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1) !important;
+          i {
+            position: absolute;
+            top: 3px;
+            color: $redClr;
+            line-height: 68px;
+            font-size: 32px;
+          }
+        }
+        .servic-cat-head {
+          font-size: 18px;
+          padding-top: 1rem;
+          font-family: $fontsTxt;
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          line-height: 1.2;
+          text-align: center;
+        }
+        p {
+          color: $greyClr;
+          padding-top: 0rem;
+          font-size: 14.4px;
+          line-height: 24px;
+          margin-top: 0;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+        .txt-primary3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          i {
+            font-size: 43px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #services .service-cards {
+    width: 100%;
+    .service-div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+     
+      .diamond-sec{
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: start;
+         margin-top: 1rem;
+         padding: 15px;
+         width: 70%;
+         transition: transform 0.3s ease-in-out;
+       }
+    }
+  }
+}
