@@ -1,0 +1,21 @@
+@import url(../../Variables.css);
+
+.startBtn{
+    background-color: white;
+    outline: none;
+    border: 1px solid white;
+    border-radius: var(--borderRadius);
+    height: 12vh;
+    width: 14%;
+    color: blueviolet;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--poppinsFonts);
+    box-shadow: var(--boxShadow);
+    transition: var(--transition);
+}
+
+.startBtn:hover{
+    cursor: pointer;
+    transition: var(--transition);
+}

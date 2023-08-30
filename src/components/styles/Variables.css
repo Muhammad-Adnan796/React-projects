@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  /* Colors */
+  --blueVoiletClr: blueviolet;
+  --blueVoiletHovClr:rgb(154, 78, 226);
+  --blueVoiletClrlt: rgba(138, 43, 226,0.5);
+  --blueVoiletClrElt: rgba(138, 43, 226,0.3);
+
+  --greenClr:green;
+  --greenLtClr:rgba(0, 128, 0,0.2);
+  --greenELtClr:rgba(0, 128, 0, 0.35);
+
+  
+  --redClr:red;
+  --redLtClr: rgba(255, 0, 0,0.2);
+  --redELtClr: rgba(255, 0, 0,0.35);
+
+  /* FontFamily */
+  --robotoFonts: "Roboto", sans-serif;
+  --poppinsFonts: "Poppins", sans-serif;
+
+  /* Box Shadow */
+  --boxShadow: 4px 4px 20px -3px white;
+
+  /* Border Radius */
+  --borderRadius:10px;
+
+  /* Transition  */
+  --transition: all 0.5s ease-in-out;
+}

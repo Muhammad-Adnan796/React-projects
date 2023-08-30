@@ -1,0 +1,190 @@
+@import url(../../Variables.css);
+
+.quizPage {
+  background-color: white;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--boxShadow);
+  width: 40vw;
+  height: 70%;
+  transition: var(--transition);
+}
+
+.quizHeading {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.19);
+}
+
+.quizPage h1 {
+  color: black;
+  font-family: var(--poppinsFonts);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.timer {
+  width: 31%;
+  background-color: var(--blueVoiletClrlt);
+  border: 1px solid var(--blueVoiletClr);
+  border-radius: 8px;
+  height: 66%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.timer p {
+  font-size: 18px;
+  font-family: var(--poppinsFonts);
+  font-weight: 400;
+}
+.timer span {
+  width: 40px;
+    display: flex;
+    height: 30px;
+  background-color: rgb(58, 57, 57);
+  color: white;
+  font-family: var(--poppinsFonts);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: var(--borderRadius);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.progressBar{
+  height: 3px;
+  background-color: var(--blueVoiletClr);
+  transition: width 0.9s ease-out;
+}
+.progressBarZ{
+  height: 3px;
+  background-color: var(--blueVoiletClr);
+}
+.quiz {
+  width: 100%;
+  height: 70%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.quizList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+}
+
+.quizList h2{
+    margin-bottom: 25px;
+}
+
+.quizList li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.3rem;
+  height: 2.8rem;
+  color: black;
+  border-radius: var(--borderRadius);
+  font-family: var(--poppinsFonts);
+  margin-top: 5px;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+  font-size: 18px;
+  border: 1px solid var(--blueVoiletClr);
+  background-color: var(--blueVoiletClrElt);
+}
+
+.quizList li:hover {
+  background-color: var(--blueVoiletClrlt);
+  transition:  var(--transition);
+}
+
+/* Bottom Buttons */
+
+.quizBtm {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
+  padding-left: 25px;
+  padding-right: 25px;
+  border-top: 1px solid rgb(194, 193, 193);
+}
+
+.quizBtm p{
+    font-family: var(--poppinsFonts);
+    font-weight: 500;
+    font-size: 17px;
+}
+.quizBtm button {
+  padding: 9px 14px;
+  font-weight: 500;
+  border-radius: var(--borderRadius);
+  font-size: 18px;
+  font-family: var(--poppinsFonts);
+  margin: 5px;
+  outline: none;
+  border: 1px solid var(--blueVoiletClr);
+  background-color: var(--blueVoiletClr);
+  letter-spacing: 0.5px;
+  color: white;
+  transition: var(--transition);
+}
+
+.quizBtm button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--blueVoiletHovClr);
+  transition: var(--transition);
+}
+
+
+/* Correct or Wrong classes Styling */
+.quizList .correctOption{
+  border: 1px solid var(--greenClr);
+  background-color: var(--greenLtClr);
+  color: var(--greenClr);
+}
+.quizList .wrongOption{
+  border: 1px solid var(--redClr);
+  background-color: var(--redLtClr);
+  color: var(--redClr);
+}
+
+.quizList .correctOption:hover {
+  border: 1px solid var(--greenClr);
+  background-color: var(--greenELtClr);
+  pointer-events: all;
+}
+.quizList .wrongOption:hover{
+  border: 1px solid var(--redClr);
+  background-color: var(--redELtClr);
+  pointer-events: all;
+}
+
+.correctOption .tickIcon,.wrongOption .crossIcon{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.correctOption .tickIcon{
+color: var(--greenClr);
+}
+.wrongOption .crossIcon{
+color: var(--redClr);
+}
