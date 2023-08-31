@@ -4,7 +4,7 @@
   background-color: white;
   border-radius: var(--borderRadius);
   box-shadow: var(--boxShadow);
-  width: 40vw;
+  width: 45%;
   height: 50%;
   transition: var(--transition);
 }
@@ -27,14 +27,14 @@
   color: black;
   font-family: var(--poppinsFonts);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 
 .rules {
   width: 100%;
   height: 60%;
-  padding-left: 43px;
-  padding-right: 18px;
+  padding-left: 8%;
+  padding-right: 2%;
 }
 
 .rulesList {
@@ -44,13 +44,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  text-align: start;
 }
 .rulesList li {
   font-family: var(--poppinsFonts);
   margin-top: 4px;
   margin-bottom: 4px;
   letter-spacing: 0.3px;
-  font-size: 17px;
+  font-size: 1.44vw;
 }
 
 .rulesList li span {
@@ -75,7 +76,7 @@
     padding:9px 14px;
     font-weight: 600;
     border-radius: var(--borderRadius);
-    font-size: 15px;
+    font-size: 1.4vw;
     font-family: var(--poppinsFonts);
     margin: 5px;
     outline: none;
@@ -92,7 +93,6 @@
     background-color: var(--blueVoiletClr);
 }
 
-
 .ECBtn button:first-child:hover{
     color: white;
     background-color: var(--blueVoiletClr);
@@ -104,4 +104,63 @@
     color: white;
     background-color: var(--blueVoiletHovClr);
     transition: var(--transition);
+}
+
+
+/* Responsiveness */
+
+@media (max-width:992px) {
+ .rulesPage{
+  width: 55vw;
+ }
+ .rulesHeading h1{
+  font-size: 2vw;
+ }
+ .rulesList li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 1.8vw;
+}
+.ECBtn button{
+  font-size: 1.7vw;
+}
+
+}
+@media (max-width: 768px) {
+  .rulesPage{
+    width: 70vw;
+   }
+   .rulesHeading h1{
+    font-size: 2.7vw;
+   }
+   .rulesList li {
+    font-size: 2.4vw;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .ECBtn button{
+    font-size: 2.4vw;
+  }
+}
+@media (max-width: 500px) {
+  .rulesPage{
+    width: 100%;
+    height: 65%;
+   }
+   .rulesHeading h1{
+    font-size: 5vw;
+   }
+   .rulesList li {
+    font-size: 3.65vw;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  .ECBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ECBtn button{
+    font-size: 4.4vw;
+  }
 }

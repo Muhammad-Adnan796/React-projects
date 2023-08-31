@@ -5,10 +5,10 @@
     outline: none;
     border: 1px solid white;
     border-radius: var(--borderRadius);
-    height: 12vh;
-    width: 14%;
+    height: 9vh;
+    width: 11%;
     color: blueviolet;
-    font-size: 1.8rem;
+    font-size: 1.6vw;
     font-weight: 500;
     font-family: var(--poppinsFonts);
     box-shadow: var(--boxShadow);
@@ -18,4 +18,25 @@
 .startBtn:hover{
     cursor: pointer;
     transition: var(--transition);
+}
+
+@media (max-width:992px) {
+    .startBtn{
+        font-size: 1.7vw;
+        height: 8vh;
+    }
+}
+@media (max-width: 768px) {
+    .startBtn{
+        font-size: 2.2vw;
+        height: 7vh;
+        width: 15vw;
+    }
+}
+@media (max-width: 500px) {
+    .startBtn{
+        font-size: 15.2px;
+        height: 7vh;
+        width: 7rem;
+    }
 }
