@@ -9,7 +9,9 @@ import "../styleComponents/sass/_Services.scss";
 
 const Services = () => {
   return (
-    <div id="services">
+
+    <div className="services">
+    <a id="services"></a>
       <h1>OUR SERVICES</h1>
       <hr />
       <p className="services-des">

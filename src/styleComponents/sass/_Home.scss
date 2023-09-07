@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+  &::selection{
+    background-color: #2b2424;
+    color: white;
+  }
 }
 
 .container {
@@ -44,9 +50,10 @@
       color: rgba(255, 255, 255, 0.65);
       line-height: 24px;
       text-align: center;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 0.2px;
       margin: 10px;
+      font-family: $rubikFonts;
     }
     a {
       display: block;
@@ -65,7 +72,6 @@
     top: 112px;
     left: 0;
     display: flex;
-    transition: all 0.5s ease;
   
     .setting {
       cursor: pointer;
@@ -93,7 +99,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: transform 0.5s ease;
       h2 {
         color: black;
         font-size: 16px;
@@ -104,7 +109,43 @@
       div {
         height: 70%;
         width: 90%;
-        background-color: blueviolet;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        .clr{
+          cursor: pointer;
+          display: block;
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+          margin: 5px;
+          background-color: $redClr;
+        }
+        .red-div{
+          background-color: $redClr;
+        }
+        .green-div{
+          background-color: $greenClr;
+        }
+        .pink-div{
+          background-color: $pinkClr;
+        }
+        .cyan-div{
+          background-color: $cyanClr;
+        }
+        .purple-div{
+          background-color: $purpleClr;
+        }
+        .blue-div{
+          background-color: $blueClr;
+        }
+        .orange-div{
+          background-color: $orangeClr;
+        }
+        .mango-div{
+          background-color: $mangoClr
+        }
       }
     }
   }

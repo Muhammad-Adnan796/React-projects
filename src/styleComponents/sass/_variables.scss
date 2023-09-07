@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+$rubikFonts:'Rubik', sans-serif;
+
+// Poppins Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 $fontsTxt: "Poppins", sans-serif;
 
 
@@ -6,7 +11,7 @@ $fontsTxt: "Poppins", sans-serif;
 $redClr : #fb3e3e;
 $greenClr : #1bbc9d;;
 $pinkClr : #f85f89;
-$lightGreenClr : #00e6e6;
+$cyanClr : #00e6e6;
 $purpleClr : #704fff;
 $blueClr : #2762da;
 $orangeClr : #f09105;
@@ -14,3 +19,14 @@ $mangoClr : #f6cb42;
 
 // services txt clr
 $greyClr:#95a0ab ;
+
+// features colors
+$featurBgClr: rgba(248,249,250,1);
+
+
+@mixin transitions($val:""){
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: translateY($val);
+    }
+}

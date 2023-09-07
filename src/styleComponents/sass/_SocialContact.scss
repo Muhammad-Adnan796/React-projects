@@ -1,0 +1,108 @@
+@import "./variables";
+
+.social-info {
+  width: 100%;
+  padding-right: 8.5%;
+  padding-left: 8.5%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $featurBgClr;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .social {
+    width: calc(96% / 2.5);
+    display: flex;
+    padding: 20px 0px;
+    position: relative;
+  }
+  .icons {
+    flex-wrap: wrap;
+    span {
+      position: relative;
+      margin-right: 8px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: 2px solid #afb5bd;
+      border-radius: 50%;
+      color: #afb5bd;
+      width: 48px;
+      height: 48px;
+      display: block;
+      font-size: 19px;
+      line-height: 44px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        cursor: pointer;
+        color: $redClr;
+      }
+    }
+  }
+  .numb {
+    width: calc(96% / 1.82);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .i {
+        color: black;
+        font-weight: 100;
+        line-height: 1;
+        margin: 8px;
+        font-size: 20px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: $rubikFonts;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .social-info {
+    flex-direction: column;
+    align-items: flex-start;
+    .icons {
+      position: relative;
+      width: 100%;
+    }
+    .numb {
+      flex-direction: column;
+      align-items: flex-start;
+
+      width: 100%;
+      span:first-child {
+        padding-bottom: 20px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+      span:last-child {
+        padding-top: 20px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

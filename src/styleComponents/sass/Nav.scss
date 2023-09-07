@@ -1,7 +1,4 @@
-@import url('./_Services.scss');
-@import url("./_Home.scss");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-$fontsTxt: "Poppins", sans-serif;
+@import "../sass/variables";
 
 
 .nav {
@@ -23,6 +20,7 @@ $fontsTxt: "Poppins", sans-serif;
     display: flex;
     list-style: none;
     gap: 3vw;
+
     .nav-link {
       display: block;
       text-decoration: none;
@@ -31,13 +29,17 @@ $fontsTxt: "Poppins", sans-serif;
       text-transform: capitalize;
       cursor: pointer;
       transition: all 0.5s;
-      font-family: $fontsTxt;
-      font-weight: 500;
+      font-family: $rubikFonts;
+      font-weight: 400;
       letter-spacing: 0.3px;
       &:hover {
         color: white;
       }
     }
+    a .active{
+      color: white;
+      font-weight: 500;
+      }
   }
   #free-btn {
     background-color: #fb3e3e;
@@ -47,8 +49,8 @@ $fontsTxt: "Poppins", sans-serif;
     padding: 10px 20px;
     font-size: 14px;
     letter-spacing: 0.5px;
-    font-family: $fontsTxt;
-    font-weight: 500;
+    font-family: $rubikFonts;
+    font-weight: 400;
     position: relative;
     cursor: pointer;
     transition: transform 0.5s ease;

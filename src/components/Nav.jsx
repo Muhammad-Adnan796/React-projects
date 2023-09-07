@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import "../styleComponents/sass/Nav.scss";
 
@@ -7,22 +7,31 @@ const Nav = () => {
   let [scrol, setScrol] = useState(false);
   let [menuBtn, setMenuBtn] = useState(false);
 
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('services');
+
+  const menuRef = useRef()
+
+  const scrollToAbout = (clas='.container') => {
+    console.log(clas);
+    const aboutSection = document.querySelector(clas);
     if (aboutSection) {
       const navbarHeight = document.querySelector('.nav').clientHeight;
-      const yOffset = aboutSection.getBoundingClientRect().top + window.scrollY - navbarHeight;
+      const yOffset = aboutSection.getBoundingClientRect().top + window.scrollY - (navbarHeight - parseInt("20px"));
      window.scrollTo({ top: yOffset, behavior: 'smooth' });
     }
   };
 
   const handleButtonClick = () => {
-    setMenuBtn(!menuBtn);
+    setMenuBtn((prev) => !prev);
   };
 
+
   useEffect(() => {
-    const handle = () => {
-      setMenuBtn(false);
+    const handle = (e) => {
+      if(!menuRef.current.contains(e.target)){
+
+        setMenuBtn(false);
+        console.log(menuRef.current);
+      }
     };
     document.addEventListener("mousedown", handle);
 
@@ -49,73 +58,17 @@ const Nav = () => {
         </div>
         <div id="menus">
           <ul>
-            <Link
-              // to={scrollToAbout}
-              onClick={scrollToAbout}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Home
-            </Link>
+           <a href="#home" className="nav-link" >Home</a>
+           <a href="#services" className="nav-link" >Services</a>
+           <a href="#features" className="nav-link" >Features</a>
+           <a href="#pricing" className="nav-link" >Pricing</a>
+           <a href="#team" className="nav-link" >Team</a>
+           <a href="#blog" className="nav-link" >Blog</a>
+           <a href="#contact" className="nav-link" >Contact</a>
            
-            <Link
-              to="#services"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Services
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Features
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Pricing
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Team
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Blog
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Contact
-            </Link>
           </ul>
         </div>
-        <div id="menubar" onClick={handleButtonClick}>
+        <div id="menubar" ref={menuRef} onClick={handleButtonClick}>
           <i>
             <IoMenu />
           </i>
@@ -126,69 +79,13 @@ const Nav = () => {
         <div className={menuBtn ? "menus2 menus-hide" : "menus2"}>
           <div>
             <ul>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Home
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Services
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Features
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Pricing
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Team
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Blog
-            </Link>
-            <Link
-              to="section1"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="nav-link"
-            >
-              Contact
-            </Link>
+            <a href="#home" className="nav-link" >Home</a>
+           <a href="#services" className="nav-link" >Services</a>
+           <a href="#features" className="nav-link" >Features</a>
+           <a href="#pricing" className="nav-link" >Pricing</a>
+           <a href="#team" className="nav-link" >Team</a>
+           <a href="#blog" className="nav-link" >Blog</a>
+           <a href="#contact" className="nav-link" >Contact</a>
             </ul>
           </div>
           <button id="free-btn">Try it Free</button>
