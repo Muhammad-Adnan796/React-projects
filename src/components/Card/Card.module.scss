@@ -1,0 +1,93 @@
+@import "../../utils/Constants.module.scss";
+
+ .card {
+  width: calc((100% / 3.5) - 5%);
+  margin-top: 80px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  .imge {
+    width: 100%;
+    padding: 2%;
+    height: 55vh;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px rgba(255, 69, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    img {
+      width: 96%;
+      height: 70%;
+    }
+  }
+  .rating {
+    width: 100%;
+    padding: 2%;
+    height: 15vh;
+    text-align: center;
+    h3 {
+      font-size: 18px;
+      font-family: $poppinFonts;
+      margin: 15px 0px;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10%;
+      hr {
+        width: 2px;
+        height: 20px;
+        outline: none;
+        border: none;
+        background-color: grey;
+      }
+      p {
+        font-family: $poppinFonts;
+        font-weight: 600;
+        color: rgb(44, 44, 44);
+        .ratI {
+          color: #f5d426;
+          margin: 0px 3px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:992px) {
+   .card{
+    flex: 1 0 calc(25% - 15px); /* Four cards per row with spacing */
+    max-width: calc(25% - 5px); /* Adjust spacing as needed */
+    margin: 20px 7px;
+     }
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 1 1 calc(48% - 10px); /* Two cards per row with spacing */
+    margin: 20px 9px;
+    .imge{
+      height: 36vw;
+      img {
+        width: 80%;
+        height: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
+margin: auto;
+    .imge{
+      width: 100%;
+      height: 72vw;
+    }
+    .rating{
+      width: 100%;
+    }
+  }
+}
