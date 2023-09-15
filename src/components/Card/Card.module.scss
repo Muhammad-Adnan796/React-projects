@@ -16,6 +16,29 @@
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    position: relative;
+    .DUicons{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+     span{
+      border: 1px solid transparent;
+      padding: 3px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      &:hover{
+       border-color: $primaryClr;
+       background-color: $primaryltClr;
+      }
+      .icons{
+        color: $primaryClr;
+        font-size: 25px;
+      }
+     }
+    }
     img {
       width: 96%;
       height: 70%;

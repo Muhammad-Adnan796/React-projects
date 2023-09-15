@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import cardContentCSS from "./CardContent.module.scss";
 import Card from "../../components/Card/Card";
-import axios from "axios";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Buttons from "../../components/Buttons/Buttons";
+import { Get } from "../../components/Helper/AxiosMethods";
 
 const CardContent = () => {
   const [cardData, setCardData] = useState([]);
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
+  const getData = () => {
+    Get(`products`)
       .then((response) => {
         console.log(response.data);
         setCardData([...response.data]);
@@ -19,15 +19,21 @@ const CardContent = () => {
       .catch((error) => {
         console.log(error);
       });
-  });
+  };
 
-  const handleItemClick = (id)=>{
-    navigate(`/product/${id}`)
-  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const handleItemClick = (id) => {
+    navigate(`/product/${id}`);
+  };
 
   return (
     <div className={cardContentCSS.cardContent}>
       <div className={cardContentCSS.title}>
+        <Buttons label="Form page" clicked={() => navigate(`/form`)} />
         <h1>Best Selling</h1>
         <p>
           Get in on the trend with our curated selection of best-selling styles.
@@ -37,14 +43,15 @@ const CardContent = () => {
         {cardData.map((item) => {
           return (
             <>
-           
-              <Card click={()=> handleItemClick(item.id)} id={item.id}
+              <Card
+                click={() => handleItemClick(item.id)}
+                id={item.id}
+                cardid={item.id}
                 title={item.title}
                 bgpic={item.image}
                 price={item.price}
                 rate={item.rating.rate}
               />
-             
             </>
           );
         })}

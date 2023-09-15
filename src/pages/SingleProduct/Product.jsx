@@ -1,4 +1,3 @@
-import axios from "axios";
 import productCSS from "./Products.module.scss";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -8,6 +7,7 @@ import { BsPerson } from "react-icons/bs";
 import { BiSolidStar } from "react-icons/bi";
 import { InputNumber } from "antd";
 import Buttons from "../../components/Buttons/Buttons";
+import { Get } from "../../components/Helper/AxiosMethods";
 
 const Product = () => {
   const [product, setProduct] = useState({});
@@ -20,8 +20,7 @@ const Product = () => {
  
 
   useEffect(() => {
-    axios
-      .get(`https://fakestoreapi.com/products/${id}`)
+    Get(`products`,id)
       .then((response) => {
         console.log(response.data);
         setProduct({ ...response.data });
